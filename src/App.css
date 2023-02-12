@@ -1,0 +1,104 @@
+body{
+  background-color: #39393a;
+}
+header{
+  background-color: #5d5d5f;
+}
+.Stars{
+  margin-top: 13px;
+  
+}
+.AppTitle{
+  font-size: 30PX;
+color: bisque;
+font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.App {
+  text-align: center;
+}
+.overview{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  background-color: rgb(141, 192, 175);
+  opacity: 1;
+  color: rgb(8, 8, 8);
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  transform: translateY(101%);
+}
+.MovieDetail:hover .overview{
+  transform: translateY(0%);
+}
+.Entete{
+  display: flex;
+  justify-items: baseline;
+  justify-content: space-between;
+}
+.Rate{
+  background-color: aqua;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid aqua;
+  box-shadow: inset0 5px 5px aqua;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.Card{
+  margin-left:200px;
+  margin-right:200px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.Title{
+  font-size: medium;
+
+}
+.Hedear{
+  display: flex;
+  justify-content: space-around;
+  justify-items:first baseline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
