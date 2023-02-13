@@ -1,28 +1,23 @@
-import { NavItem } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Stars from "./Stars";
+import { Button, Container, Form, Nav, Navbar, NavItem } from "react-bootstrap";
+import ReactStars from "react-rating-stars-component";
 import React , {useState} from "react";
-import App from '../App'
-function NavScrollExample(props,movies) {
- const [Search, setSearch] = useState();
- console.log(Search)
- const SearchMovie=(evt)=>{
-evt.preventDefault()
- props.movies.map.filter((movie) => movie.include(Search));
-{console.log(Search.current.value)}
- }
+function NavScrollExample({ setSearch, setRating, rating }) {
+  const ratingChanged = (newRating) => {
+    setRating(newRating);
+  };
   return (
     <Navbar bg="dark" expand="lg">
       <Container fluid>
         <div className="Hedear">
           <Navbar.Brand className="AppTitle">Movie App</Navbar.Brand>
           <NavItem className="Stars">
-            <Stars />
+            <ReactStars
+              count={5}
+              onChange={ratingChanged}
+              value={rating}
+              size={24}
+              activeColor="#ffd700"
+            />
           </NavItem>
         </div>
         <Navbar.Collapse id="navbarScroll">
@@ -38,13 +33,8 @@ evt.preventDefault()
               placeholder="Search"
               className="me-2"
               aria-label="Search"
-              onChange={(e) => setSearch(e.target.value)}
-              value={Search}
             />
-            console.log()
-            <Button variant="light" onClick={SearchMovie}>
-              Search
-            </Button>
+            <Button variant="light">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
@@ -53,3 +43,4 @@ evt.preventDefault()
 }
 
 export default NavScrollExample;
+
