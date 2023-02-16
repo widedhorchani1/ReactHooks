@@ -1,6 +1,6 @@
 import { Button, Container, Form, Nav, Navbar, NavItem } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
-import React , {useState} from "react";
+import React, { useState } from "react";
 function NavScrollExample({ setSearch, setRating, rating }) {
   const ratingChanged = (newRating) => {
     setRating(newRating);
@@ -17,6 +17,7 @@ function NavScrollExample({ setSearch, setRating, rating }) {
               value={rating}
               size={24}
               activeColor="#ffd700"
+              half={false}
             />
           </NavItem>
         </div>
@@ -33,6 +34,9 @@ function NavScrollExample({ setSearch, setRating, rating }) {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={(e) => {
+                setSearch( e.target.value);
+              }}
             />
             <Button variant="light">Search</Button>
           </Form>
@@ -43,4 +47,3 @@ function NavScrollExample({ setSearch, setRating, rating }) {
 }
 
 export default NavScrollExample;
-
