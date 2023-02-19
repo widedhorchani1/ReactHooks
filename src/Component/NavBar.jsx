@@ -1,15 +1,43 @@
 import { Button, Container, Form, Nav, Navbar, NavItem } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 function NavScrollExample({ setSearch, setRating, rating }) {
   const ratingChanged = (newRating) => {
     setRating(newRating);
   };
+  let activeStyle =
+   { color: "grey",
+    textDecoration: "unset" 
+    ,borderBottom : "2px white solid"};
   return (
     <Navbar bg="dark" expand="lg">
       <Container fluid>
         <div className="Hedear">
-          <Navbar.Brand className="AppTitle">Movie App</Navbar.Brand>
+          <Navbar.Brand>
+            <NavLink
+              style={({ isActive }) =>
+                isActive
+                  ? activeStyle
+                  : { color: "white", textDecoration: "unset" }
+              }
+              to="/home"
+            >
+              Home
+            </NavLink>
+          </Navbar.Brand>
+          <Navbar.Brand>
+            <NavLink
+              style={({ isActive }) =>
+                isActive
+                  ? activeStyle
+                  : { color: "white", textDecoration: "unset" }
+              }
+              to="/movies"
+            >
+              Movies
+            </NavLink>
+          </Navbar.Brand>
           <NavItem className="Stars">
             <ReactStars
               count={5}
@@ -35,7 +63,7 @@ function NavScrollExample({ setSearch, setRating, rating }) {
               className="me-2"
               aria-label="Search"
               onChange={(e) => {
-                setSearch( e.target.value);
+                setSearch(e.target.value);
               }}
             />
             <Button variant="light">Search</Button>

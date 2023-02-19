@@ -6,7 +6,8 @@ export const data = [
     Rate: 4,
     Category: "Action, Romance,Fantastic",
     cast: "Kristen Stewart, Robert Pattison,Taylor Lautner",
-    url: "",
+    trailer: "https://www.youtube.com/embed/xzO_Iiwt4b4",
+    id:"twi25647light"
   },
   {
     ImgSrc:
@@ -15,7 +16,8 @@ export const data = [
     Rate: 4,
     Category: "Adventure , Magic",
     cast: "Warner Bros, Daniel Radcliffe, Emma Watson",
-    url: "",
+    trailer: "https://www.youtube.com/embed/P1BGgqhVGAI",
+    id:"harr125479ry"
   },
   {
     ImgSrc:
@@ -24,7 +26,8 @@ export const data = [
     Rate: 4,
     Category: "Heroic, Romance",
     cast: "Elijah Wood, Viggo Mortensen,Ian Mckelle",
-    url: "",
+    trailer: "https://www.youtube.com/embed/V75dMMIW2B4",
+    id:"lord15698324ring"
   },
   {
     ImgSrc:
@@ -33,7 +36,8 @@ export const data = [
     Rate: 4,
     Category: "Drama, Crimenal,Policy",
     cast: "Al Pacino,Marlon Brando,Rober De Niro",
-    url: "",
+    trailer: "https://www.youtube.com/embed/UaVTIH8mujA",
+    id:"god24693150father"
   },
   {
     ImgSrc:
@@ -42,7 +46,8 @@ export const data = [
     Rate: 3,
     Category: "Comedy",
     cast: "Bradley Cooper,Ed Helms,Zach Galifianakis",
-    url: "",
+    trailer: "https://www.youtube.com/embed/hHqR9Tq16_E",
+    id:"bad41036284trip"
   },
   {
     ImgSrc:
@@ -51,6 +56,7 @@ export const data = [
     Rate: 3,
     Category: "Action ,Comedy",
     cast: "Will Smith, Martin Lawrence",
-    url: "",
+    trailer: "https://www.youtube.com/embed/vJe_UT7LKfY",
+    id:"bad365031478boys"
   },
 ];

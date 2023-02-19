@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.home{
+  font-size: xx-large;
+  color: blanchedalmond;
+  font-style: italic;
+  margin: 200px;
+}
+.detail{
+   font-size: x-large;
+  color: blanchedalmond;
+  font-style: italic;
+
+}
+

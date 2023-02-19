@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-
-function MovieCard({ ImgSrc, Title, Rate,Category, cast }) {
+function MovieCard({ ImgSrc, Title, Rate,Category, cast,id }) {
   return (
     <Card className="Carte" style={{ width: "15rem" }}>
       <Card.Img variant="top" src={ImgSrc} />
@@ -13,10 +13,9 @@ function MovieCard({ ImgSrc, Title, Rate,Category, cast }) {
             <Card.Title>{Title}</Card.Title>
             <Card.Text className="Rate">{Rate}</Card.Text>
           </div>
-          <div className="overview">
-            <Card.Text>Cast: {cast}</Card.Text>
-            <Card.Text>{Category}</Card.Text>
-          </div>
+          <Card.Link>
+            <Link to={`/movie/${id}`}> Details</Link>
+          </Card.Link>
         </div>
       </Card.Body>
     </Card>
